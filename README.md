@@ -1,41 +1,43 @@
-# KompPRO v1.2 — The Ultimate Successor to Komp-presor PRO
+# KompPRO v1.2 — Professional Batch Video Compression Studio
 
-Welcome to **KompPRO v1.2**, the official upgraded successor to **Komp-presor PRO**. KompPRO has been completely re-architected and upgraded from a single-file processing interface into a professional-grade, multi-threaded, hardware-accelerated **batch video compression studio**.
-
----
-
-## 📸 Evolution & UI Comparison
-
-| Feature / Aspect | Previous Version (Komp-presor PRO)[cite: 1] | New Successor (KompPRO v1.2) |
-| :--- | :--- | :--- |
-| **Workflow** | Single-file input queue ("Engage Compression")[cite: 1]. | Full **Batch Import Queue** supporting multi-file processing concurrently. |
-| **Hardware Telemetry** | Static or placeholder counters[cite: 1]. | **Live, Real-Time Telemetry** featuring animated graphs tracking CPU, RAM, and NVIDIA GPU usage via `psutil` and `GPUtil`. |
-| **Concurrency Control** | Hardcoded single stream[cite: 1]. | **Dynamic Concurrency Profiling** that auto-scales streams (1 to 4) based on system VRAM, with manual override options. |
-| **Error Handling** | Basic layout prone to crashing on unsupported codecs[cite: 1]. | **Self-Healing Smart Fallback System** that automatically switches to a pure CPU pipeline (`libx264`) if hardware decoding/encoding locks up. |
-| **Logs & Monitoring** | Basic bottom container[cite: 1]. | Expanded, color-coded **System Logs Console** tracking granular session states, warnings, and success flags. |
+KompPRO v1.2 is the powerful, hardware-accelerated successor to **Komp-presor PRO**. Re-engineered from the ground up, it replaces single-file processing with a robust, studio-grade batch architecture designed to protect system hardware while maximizing throughput.
 
 ---
 
-## 🚀 What’s New in KompPRO v1.2
+## 📸 Version Comparison & Screenshots
 
-* **Complete UI/UX Overhaul ("Metric Flow"):** Evolving past the legacy look, KompPRO introduces a modern "Nightshade/Ember" dark dashboard with persistent sidebar navigation (*Dashboard, Settings, Output Library, Help Center*), top window navigation arrows, and instant path-loading capabilities.
-* **Intelligent Batch Queue & VRAM Management:** Safely manages massive video batches using worker threads coupled with strict VRAM flushing and a 2-second cooldown between tasks to prevent memory overflow on consumer graphics cards.
-* **Precise Session Analytics:** Replaced generic layout counters with color-coded job completion times (`Done in Xm Ys`) and persistent output directory integration.
-* **Robust FFprobe Metadata Analysis:** Features suppressed background terminal windows (`CREATE_NO_WINDOW`) to eliminate window-flashing and prevent I/O pipeline crashes during high-speed batch imports.
+### Previous Version: Komp-presor PRO
+The legacy single-file interface featuring basic static counters, a manual single-file browser, and a rigid execution button.
+> *[Insert Screenshot of Komp-presor PRO here]*
+
+### New Successor: KompPRO v1.2
+The modern "Metric Flow" dark dashboard featuring live telemetry graphs, a multi-file staging queue, a master "Engage Compression" trigger, and individual Pause/Resume controls.
+> *[Insert Screenshot of KompPRO v1.2 here]*
 
 ---
 
-## 🛠️ Core Architecture & Tech Stack
-* **Core Framework:** Python, Eel, Tkinter, psutil, GPUtil
-* **Frontend:** HTML5, Modern CSS (Nightshade/Ember theme), Vanilla JavaScript
-* **Media Engines:** FFmpeg / FFprobe with native NVIDIA NVENC (H.264 & HEVC/H.265) support and CPU (`libx264`) fallback.
+## 🚀 Key Technical Updates & Architectural Changes
+
+* **Staged Batch Queue & Master Control ("Engage Compression"):** Unlike older single-file workflows, files are now imported into a staging queue where users can review exact metadata (Duration, File Type, Source Size, and Bitrate) before firing off the master batch sequence.
+* **True Pause & Resume System:** Integrated process thread suspension (`psutil`). Pausing a job freezes FFmpeg instantly at its exact frame without terminating the session or losing render progress, allowing users to resume seamlessly.
+* **Dynamic Hardware Concurrency Profiling:** Automatically reads system VRAM or CPU core count on startup to assign safe, optimized parallel stream limits (1 to 4 jobs), preventing memory overflow on consumer graphics cards.
+* **Self-Healing Smart Fallback System:** Prevents batch stalls. If a video's color profile or codec is rejected by the GPU's NVENC circuit, the engine dynamically reroutes the stream to a pure CPU fallback pipeline (`libx264`).
+* **Granular Job Lifecycle Management:** Features individual **Pause/Resume** toggles and permanent **Halt (Abort)** controls for every active file in the render queue.
+* **Zero-Window FFprobe Metadata Extraction:** Suppresses background terminal processes (`CREATE_NO_WINDOW`) to eliminate window-flashing and prevent I/O pipe crashes during heavy batch ingestion.
+
+---
+
+## 🛠️ Core Tech Stack
+* **Backend:** Python, Eel, Tkinter, `psutil`, `GPUtil`
+* **Frontend:** HTML5, Modern CSS (Nightshade/Ember theme), Vanilla JavaScript (Live telemetry graphs)
+* **Engines:** FFmpeg / FFprobe (NVIDIA NVENC H.264/HEVC & CPU libx264)
 
 ---
 
 ## 💻 Installation & Usage
-1. Go to the **[Releases](../../releases)** tab on the right side of this repository.
-2. Download the latest `KompPRO-v1.2.zip` release archive.
-3. Extract the folder and run `main.exe` *(Ensure `ffmpeg.exe` and `ffprobe.exe` are placed in the same directory)*.
+1. Download the latest `KompPRO-v1.2.zip` from the **[Releases](../../releases)** tab.
+2. Extract the folder and ensure `ffmpeg.exe` and `ffprobe.exe` are placed alongside `main.exe`.
+3. Launch `main.exe`.
 
 ---
 
