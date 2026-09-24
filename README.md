@@ -8,7 +8,7 @@ KompPRO v1.2 is the powerful, hardware-accelerated successor to **Komp-presor**.
 
 ### Previous Version: Komp-presor
 The legacy single-file interface featuring basic static counters, a manual single-file browser, and a rigid execution button.
-![Komp-presor UI](assets/Komp-presor_v1.0.png)
+![Komp-presor UI](Komp-presor_v1.0.png)
 
 ### New Successor: KompPRO v1.2
 The modern "Metric Flow" dark dashboard featuring live telemetry graphs, a multi-file staging queue, a master "Engage Compression" trigger, and individual Pause/Resume controls.
