@@ -1,1 +1,11 @@
+KOMPPRO — QUICK LICENSE SUMMARY
 
+Use it freely: You can download, install, and use this application for both personal and commercial projects.
+
+Don't steal or resell it: This is closed-source software. Do not reverse-engineer the code, try to crack the obfuscation, or repackage and sell it as your own.
+
+Open-source engines: The app uses FFmpeg and FFprobe in the background to handle the heavy lifting. Those are free, open-source tools, and we don't claim to own them.
+
+Zero liability (always backup): The app is provided "as is." While it is built to be safe, if your computer crashes or a video file gets corrupted during compression, the creator is not responsible for your lost data.
+
+Need help? For support or business inquiries, you can reach out directly to bishalroybror@gmail.com.
