@@ -12,7 +12,7 @@ The legacy single-file interface featuring basic static counters, a manual singl
 
 ### New Successor: KompPRO v1.2
 The modern "Metric Flow" dark dashboard featuring live telemetry graphs, a multi-file staging queue, a master "Engage Compression" trigger, and individual Pause/Resume controls.
-![KompPRO v1.2 UI](assets/komp-pro_v1.2.png)
+![KompPRO v1.2 UI](komp-pro_v1.2.png)
 
 ## 🚀 Key Technical Updates & Architectural Changes
 
